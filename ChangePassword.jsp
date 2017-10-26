@@ -5,15 +5,29 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Buyerchangepassword</title>
+        <title>Sellerchangepassword</title>
     </head>
     <body>
         
-     
+        
+        
+        <%
+
+  
+    String password="";
+    
+    if(request.getParameter("submit")!=null)
+    {       
+        password=request.getParameter("txtnewpass");  
+        String s = "update tbl_login set login_password='"+ password+"' where login_username='"+request.getParameter("hid")+"' ";
+    }
+    %>
+    
         <h1 align="center">Change password</h1>
         <table align="center">
             <form>
