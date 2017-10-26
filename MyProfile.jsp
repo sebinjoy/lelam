@@ -1,6 +1,6 @@
 <%-- 
-    Document   : HomePage
-    Created on : Oct 3, 2017, 10:32:13 AM
+    Document   : MyProfile
+    Created on : Oct 3, 2017, 10:32:24 AM
     Author     : Nabeel NK
 --%>
 
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Buyer</h1>
+        <h1>Hello World!</h1>
     </body>
 </html>
