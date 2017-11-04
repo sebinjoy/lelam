@@ -12,6 +12,25 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Seller!</h1>
+        <h1>Buyer</h1>
+        
+        
+                <table>
+            <tr>
+                <td><a href="MyProfile.jsp">My profile</a></td>
+            </tr>
+            <tr>
+                <td><a href="ChangePassword.jsp">Change Password</a></td>
+            </tr>
+            <tr>
+                <td><a href="ProdcutList.jsp">Product List </a></td>
+            </tr>
+             <tr>
+                 <td><a href="Notification.jsp.jsp">Notification </a></td>
+            </tr>
+           
+        </table>
+        
+        
     </body>
 </html>

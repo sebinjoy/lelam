@@ -11,6 +11,36 @@
 <!DOCTYPE html>
 <html>
     <head>
+           <script src="jquery.min.js" type="text/javascript"></script>
+        
+        <script>
+            function getProduct(v) 
+    {
+     var m=document.getElementById('cat').value;
+  //alert(v+""+m);  
+    $.ajax({url: "Ajax-GetProduct.jsp?id="+v+"&cid="+m, success: function(result){
+          //  alert(result);
+        $("#rsultform").html(result);
+    }});
+
+        
+        
+    }
+     function subcat(v) 
+    {
+        
+    // alert(v+""+m);  
+    $.ajax({url: "subcat.jsp?id="+v, success: function(result){
+          //  alert(result);
+        $("#sub").html(result);
+    }});
+
+        
+        
+    }
+            </script>
+     
+   
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>viewproduct</title>
         <style>
@@ -104,8 +134,8 @@
     <body>
         <h1>Product</h1>
         <label>Select Category</label>  
-        <select onchange="getProduct(this.value)" >
-            <option>--select--</option>
+        <select name="cat" id="cat" onchange="subcat(this.value)" >
+            <option value="">--select--</option>
         <%
         ResultSet RsSelCategory=obj.select("select * from tbl_category");
         while(RsSelCategory.next())
@@ -123,26 +153,12 @@
      %>
         
         </select>
+     Sub-category<select id="sub" onchange="getProduct(this.value)">
+          <option value="">--select--</option>
+     </select>
      <form id="rsultform" style="width: 1200px">
          
      </form>
-     
-      <script src="jquery.min.js" type="text/javascript"></script>
-        
-        <script>
-            function getProduct(v) 
-    {
-        
-   //  alert(v);  
-    $.ajax({url: "Ajax-GetProduct.jsp?id="+v, success: function(result){
-          //  alert(result);
-        $("#rsultform").html(result);
-    }});
-
-        
-        
-    }
-            </script>
      
     </body>
 </html>

@@ -4,8 +4,9 @@
 <%
 String did=request.getParameter("id");
 String ProductId="";
+String catId=request.getParameter("cid");
 
-                                String str="select * from tbl_product p where p.cat_id="+did;
+                                String str="select * from tbl_product p where p.cat_id ="+catId+" and p.sub_id="+did;
                                 ResultSet rs=obj.select(str);
                               
                                 while(rs.next())
