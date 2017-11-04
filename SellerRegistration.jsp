@@ -28,7 +28,7 @@
             boolean b=obj.insert("insert into tbl_seller(seller_fname,seller_lname,seller_address,place_id,seller_localplace,seller_email,seller_username,seller_password)"
                     + " VALUES('"+seller_fname+"','"+seller_lname+"','"+seller_address+"','"+place_id+"','"+seller_localplace+"','"+seller_email+"','"+seller_username+"','"+seller_password+"')" );
             //out.println(inse);
-            response.sendRedirect("");
+           // response.sendRedirect("");
            
         }
             %>

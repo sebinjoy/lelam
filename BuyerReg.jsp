@@ -28,6 +28,7 @@
             boolean b=obj.insert("insert into tbl_buyer(buyer_fname,buyer_lname,buyer_address,place_id,buyer_localplace,buyer_email,buyer_username,buyer_password,buyer_ccnumber)"
                     + " VALUES('"+buyer_fname+"','"+buyer_lname+"','"+buyer_address+"','"+place_id+"','"+buyer_localplace+"','"+buyer_email+"','"+buyer_username+"','"+buyer_password+"','"+buyer_ccnumber+"')" );
             //out.println(inse);
+            out.print(true);
         }
             %>
 
